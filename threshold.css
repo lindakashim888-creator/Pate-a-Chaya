@@ -1,0 +1,32 @@
+.mainnav{background:#121610f5;border-bottom:1px solid #383c33;color:#f8f8f2;backdrop-filter:blur(14px)}
+.mainnav .brand,.mainnav .navlinks a,.mainnav .mobile-menu{color:#f8f8f2}.mainnav .brand>span{color:#ff4643}
+.mainnav .navlinks a:hover,.mainnav .navlinks a[aria-current=true]{color:#ff817a}.mainnav .nav-study{background:#f4f4ee;color:#191d17}
+.mainnav .nav-study:hover{background:#e1e3d8}.mainnav .mobile-menu{background:transparent}
+.threshold{margin:0;background:#141711;color:#fff;isolation:isolate}.threshold-stage{height:clamp(550px,73svh,850px);position:relative;isolation:isolate;overflow:hidden;background:#20241a}
+.threshold-visual,.threshold-shade,.threshold-image{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.threshold-visual{overflow:hidden}.threshold-image{object-fit:cover;object-position:53% 53%;transform:scale(1.035) translate3d(var(--threshold-x,0px),var(--threshold-y,0px),0);transition:transform 1.2s cubic-bezier(.15,.65,.18,1)}
+.threshold-shade{z-index:1;background:linear-gradient(90deg,rgba(9,16,11,.7) 0%,rgba(12,17,12,.47) 31%,rgba(12,17,12,.12) 60%,transparent 85%),linear-gradient(0deg,#10160ee6 0%,#10160e80 12%,transparent 48%,#0e170f30 100%)}
+.threshold-inner{position:relative;z-index:2;height:100%;width:100%;max-width:1680px;margin:auto;padding:clamp(30px,4.8vh,73px) var(--outer) clamp(40px,6vh,80px);display:flex;flex-flow:column;justify-content:space-between;align-items:flex-start}
+.threshold-location{font:650 clamp(11px,1vw,15px)/1.3 var(--font-sans);letter-spacing:.145em;text-transform:uppercase;display:flex;align-items:center;gap:11px;text-shadow:0 1px 7px #132014}
+.threshold-location span{display:block;width:22px;height:3px;background:#ff5652}.threshold-location b{font-weight:400;opacity:.75}
+.threshold-copy{max-width:850px}.threshold h1{margin:0;color:#fffaf1;font:400 clamp(82px,7.85vw,140px)/.86 var(--display);letter-spacing:-.079em}
+.threshold h1 em{font-style:normal;font-weight:inherit}.threshold h1 span{color:#ff4744}
+.threshold-copy>p{margin:18px 0 23px;font:500 clamp(17px,1.48vw,23px)/1.38 var(--font-sans);letter-spacing:-.027em;color:#f5f3e9;max-width:39ch;text-wrap:pretty}
+.threshold-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.threshold-actions button,.threshold-pano{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:47px;padding:10px 20px;border-radius:80px;cursor:pointer;font:650 15px/1.15 var(--font-sans)}
+.threshold-play{border:1px solid #fffaf2;background:#fffaf2;color:#182117}.threshold-play:hover{background:#fff}
+.threshold-walk,.threshold-pano{border:1px solid #f6f8edad;background:#18231475;color:#fff;backdrop-filter:blur(9px)}
+.threshold-walk:hover,.threshold-pano:hover{background:#f6f8ed;color:#1c221a}
+.threshold-pano{position:absolute;right:var(--outer);bottom:clamp(40px,6vh,80px);min-height:39px;padding:7px 13px;font-size:13px}
+.chapter-strip{max-width:1680px;padding:19px var(--outer) 21px;display:grid;grid-template-columns:minmax(150px,.79fr) repeat(3,minmax(0,1fr));align-items:center;gap:0;margin:0 auto;background:#141711}
+.strip-intro>span,.strip-info small{display:block;color:#c6cbbd;font:600 11px/1.4 var(--font-sans);letter-spacing:.12em;text-transform:uppercase}
+.strip-intro strong{font:700 clamp(19px,1.9vw,28px)/1.22 var(--font-sans);letter-spacing:-.045em}.chapter-strip button{display:flex;text-align:left;align-items:center;gap:13px;padding:2px clamp(10px,1.6vw,28px);background:transparent;border:0;border-left:1px solid #42483b;color:#fff;cursor:pointer}
+.strip-img{display:block;flex:0 0 clamp(65px,6.3vw,100px);aspect-ratio:1.55;overflow:hidden;border-radius:4px;background:#31352d}
+.strip-img img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s}.chapter-strip button:hover img,.chapter-strip button:focus-visible img{transform:scale(1.075)}
+.strip-info strong{display:block;font:630 clamp(16px,1.55vw,25px)/1.24 var(--font-sans);letter-spacing:-.035em}.chapter-strip button:hover .strip-info strong{color:#fdada2}.threshold :focus-visible{outline:3px solid #ffb09f;outline-offset:3px}
+.reference-film{display:block;margin:12px 0 0;padding:1px 0;border:0;border-bottom:1px solid currentColor;background:transparent;cursor:pointer;font:600 15px/1.5 var(--font-sans);color:#a71d27}
+@media(max-width:900px){.chapter-strip{grid-template-columns:repeat(3,minmax(0,1fr))}.strip-intro{display:none}.chapter-strip button:first-of-type{border-left:0;padding-left:0}.threshold-stage{height:clamp(520px,68svh,720px)}.threshold h1{font-size:clamp(68px,9.8vw,87px)}.threshold-pano{bottom:auto;top:30px}.threshold-inner{padding-top:35px}}
+@media(max-width:730px){.mainnav .navlinks{background:#171c16}.mainnav .navlinks a{color:#fbfbf4}.threshold-stage{height:clamp(485px,66svh,640px)}.threshold-inner{padding:22px var(--outer) 29px}.threshold-image{object-position:63% 49%;transform:scale(1.01)}.threshold-shade{background:linear-gradient(0deg,#0e150eea 0%,#10160ec2 25%,#10160e52 57%,#10160e12 82%,#10160e70 100%)}.threshold-location{max-width:70%;font-size:10px;letter-spacing:.09em;line-height:1.55;gap:6px;flex-wrap:wrap}.threshold-location span{width:15px;height:2px}.threshold h1{font-size:clamp(63px,12vw,85px)}.threshold-copy>p{font-size:17px;margin:14px 0 20px;max-width:35ch}.threshold-actions{gap:8px}.threshold-actions button{min-height:44px;font-size:13px;padding:9px 13px;gap:6px}.threshold-pano{top:15px;right:15px;min-height:33px;padding:5px 9px;font-size:12px}.threshold-pano svg{width:18px}.chapter-strip{padding:12px var(--outer) 14px;gap:10px}.chapter-strip button,.chapter-strip button:first-of-type{display:block;border:0;padding:0}.strip-img{width:100%;height:auto;aspect-ratio:2.3;border-radius:3px}.strip-info{display:block;margin-top:5px}.strip-info small{font-size:9px;letter-spacing:.06em}.strip-info strong{font-size:16px}.threshold-copy{width:100%}}
+@media(max-width:425px){.threshold-location{max-width:62%;font-size:9px;gap:4px}.threshold-location span{display:none}}@media(max-width:345px){.threshold-location{max-width:48%}.threshold-actions button{font-size:12px;padding:9px 10px}.threshold h1{font-size:55px}}
+@media(min-width:901px) and (max-height:670px){.threshold-stage{height:470px;min-height:0}.threshold h1{font-size:78px}.threshold-inner{padding-top:24px;padding-bottom:32px}.threshold-pano{bottom:32px}}
+@media(prefers-reduced-motion:reduce){.threshold-image,.strip-img img{transition:none;transform:none!important}}

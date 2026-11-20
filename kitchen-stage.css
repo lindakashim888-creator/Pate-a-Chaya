@@ -1,0 +1,70 @@
+kitchen-stage{display:block;--ks-ink:#191b16;--ks-paper:#f9f7ef;--ks-red:#dd2229;--ks-muted:#565c50;--ks-line:#d7d2c6;font-family:"DM Sans",Arial,sans-serif;color:var(--ks-ink)}
+kitchen-stage *,kitchen-stage *::before,kitchen-stage *::after{box-sizing:border-box}
+kitchen-stage .ks-shell{padding:clamp(23px,4.6vw,72px) max(18px,4.2vw);background:#fff}
+kitchen-stage .ks-heading{display:flex;justify-content:space-between;align-items:end;gap:26px;margin:0 0 24px}
+kitchen-stage h2,kitchen-stage h3,kitchen-stage p{margin:0}
+kitchen-stage .ks-kicker,kitchen-stage .ks-total small,kitchen-stage .ks-tag,kitchen-stage .ks-foot small{font-size:11px;font-weight:700;line-height:1.3;text-transform:uppercase;letter-spacing:.16em}
+kitchen-stage .ks-kicker{color:var(--ks-red);margin-bottom:8px}
+kitchen-stage h2{font-size:clamp(39px,5.6vw,88px);font-weight:700;letter-spacing:-.075em;line-height:.99}
+kitchen-stage h2 span{color:var(--ks-red)}
+kitchen-stage .ks-heading>p{max-width:39ch;line-height:1.5;font-size:16px;color:var(--ks-muted)}
+kitchen-stage .ks-options{display:flex;justify-content:space-between;align-items:center;gap:15px;border-top:1px solid var(--ks-line);padding:16px 0}
+kitchen-stage button,kitchen-stage a{font-family:inherit}
+kitchen-stage button{cursor:pointer;touch-action:manipulation}
+kitchen-stage button:focus-visible,kitchen-stage canvas:focus-visible,kitchen-stage a:focus-visible{outline:3px solid #01686b;outline-offset:3px}
+kitchen-stage .ks-toggle,kitchen-stage .ks-cameras{display:inline-flex;gap:3px}
+kitchen-stage .ks-toggle{padding:3px;border:1px solid #d4d0c4;border-radius:28px}
+kitchen-stage .ks-toggle button,kitchen-stage .ks-cameras button{font-size:15px;font-weight:600;line-height:1.2;background:transparent;border:0;color:var(--ks-ink);padding:10px 16px;border-radius:24px}
+kitchen-stage .ks-toggle button[aria-pressed=true]{background:var(--ks-ink);color:#fff}
+kitchen-stage .ks-total{display:flex;align-items:baseline;gap:10px;text-align:right}
+kitchen-stage .ks-total small{color:var(--ks-muted);letter-spacing:.08em}
+kitchen-stage .ks-total strong{font-size:clamp(22px,2.4vw,39px);letter-spacing:-.055em;line-height:1;white-space:nowrap}
+kitchen-stage .ks-room{display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,27%);border:1px solid var(--ks-line);background:var(--ks-paper)}
+kitchen-stage .ks-visual{display:flex;flex-direction:column;min-width:0;background:radial-gradient(ellipse at 50% 35%,#fffdf4 0%,#f0ede2 75%,#e6e2d4 100%)}
+kitchen-stage .ks-scene{position:relative;cursor:grab;touch-action:pan-y;min-height:310px;aspect-ratio:1.85;flex:1;overflow:hidden}
+kitchen-stage .ks-scene.ks-grabbing{cursor:grabbing}
+kitchen-stage canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+kitchen-stage .ks-pins{position:absolute;inset:0;pointer-events:none}
+kitchen-stage .ks-pin{position:absolute;pointer-events:auto;transform:translate(-50%,-50%);display:grid;place-content:center;width:31px;height:31px;min-width:0;padding:0;border:2px solid #fff;border-radius:50%;background:#c6262d;color:white;box-shadow:0 2px 6px #4f38294d;font-size:11px;line-height:1;font-weight:700;isolation:isolate}
+kitchen-stage .ks-pin::before{content:"";position:absolute;inset:-6px;border-radius:50%}
+kitchen-stage .ks-pin[aria-pressed=true]{background:#171a15;box-shadow:0 0 0 3px #dc302d,0 3px 8px #5f443e55;z-index:1}
+kitchen-stage .ks-tools{display:flex;align-items:center;justify-content:space-between;padding:8px 17px 12px;gap:12px}
+kitchen-stage .ks-drag{font-size:13px;color:#5b5b50}
+kitchen-stage .ks-cameras{gap:0;border-radius:30px;padding:2px;background:#fffdf5d9;border:1px solid #d6d1c2}
+kitchen-stage .ks-cameras button{padding:8px 11px;font-size:13px}
+kitchen-stage .ks-cameras button[aria-pressed=true]{background:#e7e2d4}
+kitchen-stage .ks-detail{display:flex;flex-direction:column;align-items:start;gap:14px;background:#20231d;color:#fffcf0;padding:clamp(20px,2.4vw,43px)}
+kitchen-stage .ks-tag{letter-spacing:.085em;color:#d1cbb9}
+kitchen-stage .ks-tag span{display:block;color:#ff947e;padding-top:4px}
+kitchen-stage h3{font-weight:700;line-height:1.04;letter-spacing:-.055em;font-size:clamp(24px,2.35vw,42px)}
+kitchen-stage .ks-price{font-size:clamp(24px,2.35vw,40px);letter-spacing:-.058em;line-height:1;font-weight:500}
+kitchen-stage .ks-detail>p:not(.ks-tag){font-size:16px;line-height:1.5;color:#eae7da}
+kitchen-stage .ks-foot{display:grid;gap:4px;border-top:1px solid #5b5b50;padding-top:13px;width:100%}
+kitchen-stage .ks-foot small{color:#d1cbb9;letter-spacing:.08em}
+kitchen-stage .ks-foot span{font-size:15px;line-height:1.35}
+kitchen-stage .ks-detail a{color:#fff4d9;font-size:14px;text-underline-offset:3px;margin-top:auto}
+kitchen-stage .ks-index{display:flex;gap:7px;flex-wrap:wrap;margin:15px 0 10px}
+kitchen-stage .ks-index button{color:var(--ks-ink);background:#fff;border:1px solid #d3d1c6;border-radius:24px;font-size:14px;line-height:1.2;padding:9px 12px}
+kitchen-stage .ks-index button small{font-size:10px;font-weight:700;color:#ba2526;margin-right:3px}
+kitchen-stage .ks-index button[aria-pressed=true]{background:#f9e8e4;border-color:#d8675b}
+kitchen-stage .ks-note{font-size:14px;line-height:1.48;color:var(--ks-muted);max-width:97ch}
+kitchen-stage .ks-note a{color:inherit;text-underline-offset:3px;white-space:nowrap}
+@media(max-width:820px){kitchen-stage .ks-heading{display:grid;gap:12px}kitchen-stage .ks-heading>p{max-width:62ch}kitchen-stage .ks-room{grid-template-columns:1fr}kitchen-stage .ks-scene{flex:auto;min-height:0;aspect-ratio:1.63}kitchen-stage .ks-detail{display:grid;grid-template-columns:1fr auto;gap:9px 18px}kitchen-stage .ks-tag,kitchen-stage .ks-detail>p,kitchen-stage .ks-foot,kitchen-stage .ks-detail a{grid-column:1/-1}kitchen-stage .ks-tag span{display:inline;padding-left:8px}kitchen-stage .ks-price{align-self:start}kitchen-stage .ks-detail a{margin:0}}
+@media(max-width:520px){kitchen-stage .ks-options{align-items:start;gap:6px}kitchen-stage .ks-total{display:grid;gap:4px;padding-top:1px}kitchen-stage .ks-total small{font-size:8px}kitchen-stage .ks-toggle button{font-size:12px;padding:10px 9px}kitchen-stage .ks-scene{aspect-ratio:1.25}kitchen-stage .ks-tools{padding:3px 9px 10px}kitchen-stage .ks-pin{width:26px;height:26px;font-size:10px}kitchen-stage .ks-index{gap:5px}kitchen-stage .ks-index button{font-size:12px;padding:8px 9px}kitchen-stage .ks-detail{padding:18px}kitchen-stage .ks-tag{font-size:10px}kitchen-stage .ks-note{font-size:13px}}
+kitchen-stage .ks-pin[hidden]{display:none}
+@media(max-width:380px){kitchen-stage .ks-drag{font-size:11px}kitchen-stage .ks-cameras button{font-size:12px;padding:7px 8px}}
+kitchen-stage [hidden]{display:none!important}
+kitchen-stage .ks-bake-open{background:#fff4da;border:0;border-radius:25px;color:#27271f;padding:11px 15px;font-size:15px;font-weight:650;line-height:1.2;text-align:left}
+kitchen-stage .ks-bake-open:hover{background:#e7cfa0}
+kitchen-stage.ks-baking .ks-scene{cursor:default;background:#263129}
+kitchen-stage .ks-bake-back{position:absolute;top:12px;left:12px;z-index:1;border:1px solid #e8dbc48c;background:#273027d9;color:#fffbea;border-radius:24px;padding:8px 12px;line-height:1.2;font-size:13px}
+kitchen-stage .ks-bake-bar{background:#253027;color:#fff6df;padding:12px clamp(12px,2vw,25px) 17px;border-top:1px solid #66705a}
+kitchen-stage .ks-bake-line{display:flex;align-items:center;justify-content:space-between;gap:8px}
+kitchen-stage .ks-bake-phases{display:flex;align-items:center;gap:3px;flex-wrap:wrap}
+kitchen-stage .ks-bake-phases button,kitchen-stage .ks-bake-play{font-family:inherit;font-size:14px;font-weight:600;line-height:1.15;border-radius:22px;border:1px solid #83927b;background:transparent;color:#fff6de;padding:8px 12px}
+kitchen-stage .ks-bake-phases button[aria-pressed=true]{color:#27261e;background:#f2dda9;border-color:#f2dda9}
+kitchen-stage .ks-bake-play{color:#fff9ea;font-weight:500;border-color:#a1aa95;white-space:nowrap}
+kitchen-stage .ks-bake-caption{color:#efe8d5;font-size:15px;line-height:1.4;margin:10px 0 0;min-height:2.8em}
+kitchen-stage .ks-bake-back:hover,kitchen-stage .ks-bake-play:hover{background:#495242}
+@media(max-width:820px){kitchen-stage .ks-bake-open{grid-column:1/-1;justify-self:start}}
+@media(max-width:420px){kitchen-stage .ks-bake-bar{padding:9px 10px 13px}kitchen-stage .ks-bake-phases button,kitchen-stage .ks-bake-play{font-size:12px;padding:8px 9px}kitchen-stage .ks-bake-back{font-size:11px;top:6px;left:6px;padding:6px 8px}kitchen-stage .ks-bake-caption{font-size:14px}}

@@ -1,0 +1,46 @@
+packaging-lab{--pk-red:#d62b1b;--pk-black:#181811;--pk-cream:#faf6ee;display:block;background:var(--pk-cream);color:var(--pk-black);font:400 16px/1.5 var(--font-sans,"DM Sans",Arial,sans-serif)}
+packaging-lab *,packaging-lab *::before,packaging-lab *::after{box-sizing:border-box}
+.pk-wrap{max-width:1490px;margin:auto;padding:clamp(54px,7vw,108px) clamp(20px,5.2vw,85px)}
+.pk-head{display:grid;grid-template-columns:1.32fr .68fr;gap:clamp(22px,5vw,80px);align-items:end;margin:0 0 32px}
+.pk-head h2,.pk-concepts>h3,.pk-info h3{font:750 clamp(52px,6.7vw,100px)/.94 var(--font-sans,"DM Sans",Arial,sans-serif);letter-spacing:-.068em;margin:0}
+.pk-head em,.pk-concepts em{color:var(--pk-red);font-style:normal}
+.pk-head p{font-size:clamp(17px,1.3vw,20px);max-width:460px;margin:0 0 2px}
+.pk-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:2px solid var(--pk-black);border-bottom:1px solid #ada89d}
+.pk-tabs button{display:flex;align-items:center;gap:9px;min-height:76px;padding:8px 6px;border:0;border-bottom:3px solid transparent;border-radius:0;background:transparent;color:var(--pk-black);font-family:inherit;font-size:16px;font-weight:650;line-height:1.2;text-transform:capitalize;text-align:left;cursor:pointer}
+.pk-tabs button[aria-selected=true]{border-bottom-color:var(--pk-red);color:#ae2518}
+.pk-tabs button:hover{background:#efe8db}
+.pk-tabs img{width:clamp(32px,4vw,59px);height:auto;aspect-ratio:1;object-fit:cover}
+.pk-case{display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,4vw,66px);margin-top:30px;align-items:start}
+.pk-visual{background:#e1d6c6}
+.pk-visual img,.pk-grid img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover}
+.pk-info h3{font-size:clamp(35px,3.8vw,65px);line-height:1.01;margin:8px 0 16px}
+.pk-info p{margin:0 0 15px}
+.pk-info .pk-channel{font-size:16px;font-weight:700;color:var(--pk-red);margin:0}
+.pk-bom{margin:18px 0 20px}
+.pk-bom div{display:flex;justify-content:space-between;gap:16px;padding:8px 0;border-top:1px solid #c3bcae;font-variant-numeric:tabular-nums}
+.pk-bom dt,.pk-bom dd{margin:0}
+.pk-bom dd{font-weight:650;white-space:nowrap}
+.pk-bom .pk-total{border-top:2px solid var(--pk-black);font-weight:750}
+.pk-offer strong,.pk-offer span{display:block}
+.pk-offer span{font-size:15px;margin-top:3px}
+.pk-info details{border-block:1px solid #c3bcae}
+.pk-info summary{display:flex;align-items:center;justify-content:space-between;min-height:47px;font-weight:bold;cursor:pointer;list-style:none}
+.pk-info summary::-webkit-details-marker{display:none}
+.pk-info summary span{color:var(--pk-red);font-weight:700}
+.pk-info details[open] summary span{transform:rotate(45deg)}
+.pk-info details p{font-size:16px}
+.pk-basis{margin:26px 0 0;display:flex;align-items:start;gap:24px;justify-content:space-between;border-bottom:1px solid #c3bcae;padding-bottom:24px}
+.pk-basis p{max-width:62ch;margin:0}
+.pk-basis div{display:flex;flex-wrap:wrap;gap:8px 18px}
+.pk-basis a{color:var(--pk-black);text-underline-offset:3px}
+.pk-concepts{margin-top:clamp(40px,5vw,80px)}
+.pk-concepts>h3{font-size:clamp(38px,4vw,64px);margin-bottom:24px}
+.pk-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2.1vw,32px)}
+.pk-grid figure,.pk-grid h4,.pk-grid p{margin:0}
+.pk-grid figcaption{padding-top:14px}
+.pk-grid h4{font-size:clamp(21px,2vw,32px);line-height:1.13;letter-spacing:-.03em;margin-bottom:8px}
+.pk-grid strong{color:#a2271b}
+.pk-grid p{margin-top:8px}
+.pk-wrap :focus-visible{outline:2px solid var(--pk-red);outline-offset:2px}
+@media(max-width:810px){.pk-head{grid-template-columns:1fr;gap:16px}.pk-tabs{display:flex;overflow-x:auto}.pk-tabs button{flex:0 0 135px;min-height:65px}.pk-case{gap:22px}.pk-basis{display:block}.pk-basis div{margin-top:10px}.pk-head p{max-width:650px}}
+@media(max-width:600px){.pk-case{grid-template-columns:1fr}.pk-head h2{font-size:clamp(50px,12vw,72px)}.pk-grid{grid-template-columns:1fr;gap:28px}.pk-tabs button{flex-basis:124px}.pk-tabs img{width:35px}.pk-grid figure{display:grid;grid-template-columns:.7fr 1fr;gap:14px;align-items:start}.pk-grid figcaption{padding:0}.pk-grid h4{font-size:22px}}

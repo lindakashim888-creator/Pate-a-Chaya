@@ -1,0 +1,35 @@
+cost-catalogue {
+  --buy-bg: #f7f4e9;
+  --buy-ink: #28281e;
+  --buy-green: #49513b;
+  --buy-border: #c9c8b5;
+  display: block;
+  color: var(--buy-ink);
+  background: var(--buy-bg);
+  font: 400 1rem/1.55 var(--font-sans,"DM Sans",Arial,sans-serif);
+}
+cost-catalogue *, cost-catalogue *::after, cost-catalogue *::before { box-sizing: border-box; }
+cost-catalogue .buy-wrap {max-width:1490px;margin:0 auto;padding:clamp(56px,7vw,112px) clamp(20px,5.2vw,88px);}
+cost-catalogue .buy-heading {display:grid;grid-template-columns:1.4fr .7fr;align-items:end;gap:40px;margin-bottom:32px;}
+cost-catalogue h2 {font:400 clamp(54px,6.5vw,100px)/.98 var(--font-serif,"Instrument Serif",Georgia,serif);letter-spacing:-.05em;margin:0;}
+cost-catalogue h2 em {color:var(--buy-green);}
+cost-catalogue .buy-heading p {max-width:440px;margin:0;}
+cost-catalogue .buy-tabs {display:flex;gap:clamp(21px,3.6vw,54px);border-bottom:1px solid var(--buy-border);}
+cost-catalogue .buy-tabs button {appearance:none;border:none;border-bottom:3px solid transparent;background:none;font:inherit;font-weight:650;color:var(--buy-green);border-radius:0;padding:12px 0;cursor:pointer;}
+cost-catalogue .buy-tabs button[aria-selected="true"] {color:var(--buy-ink);border-bottom-color:#bd3828;}
+cost-catalogue .buy-tabs button:hover,cost-catalogue .buy-source:hover {color:#943324;}
+cost-catalogue [hidden] {display:none !important;}
+cost-catalogue :focus-visible {outline:2px solid #923621;outline-offset:3px;}
+cost-catalogue .buy-context {max-width:900px;font-size:clamp(16px,1.3vw,20px);line-height:1.5;margin:24px 0 30px;color:var(--buy-green);}
+cost-catalogue .buy-cards {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(32px,4vw,60px) clamp(16px,2vw,34px);}
+cost-catalogue .buy-card {min-width:0;display:flex;flex-direction:column;align-items:flex-start;}
+cost-catalogue .buy-card figure {width:100%;margin:0 0 20px;aspect-ratio:1.35;background:#dcdbcc;overflow:hidden;}
+cost-catalogue .buy-card img {display:block;width:100%;height:100%;object-fit:cover;}
+cost-catalogue h3 {font:400 clamp(28px,2.6vw,43px)/1.08 var(--font-serif,"Instrument Serif",Georgia,serif);letter-spacing:-.035em;margin:0 0 13px;}
+cost-catalogue .buy-price {margin:0;color:var(--buy-green);font-size:clamp(21px,1.9vw,29px);font-weight:650;line-height:1.25;font-variant-numeric:tabular-nums;}
+cost-catalogue .buy-basis {font-size:14px;font-weight:650;margin:3px 0 15px;}
+cost-catalogue .buy-detail {font-size:16px;line-height:1.48;margin:0 0 15px;}
+cost-catalogue .buy-source {color:var(--buy-green);font-size:14px;font-weight:650;text-decoration:underline;text-underline-offset:4px;display:inline-block;margin-top:auto;line-height:1.55;}
+@media(max-width:990px) {cost-catalogue .buy-cards {grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:700px) {cost-catalogue .buy-heading {grid-template-columns:1fr;gap:15px;margin-bottom:19px;}cost-catalogue .buy-heading p {max-width:100%;}cost-catalogue .buy-context {margin:19px 0 24px;}}
+@media(max-width:565px) {cost-catalogue .buy-cards {grid-template-columns:1fr;gap:34px;}cost-catalogue .buy-card figure {aspect-ratio:1.4;margin-bottom:17px;}cost-catalogue .buy-detail {max-width:46ch;}}
