@@ -22,12 +22,7 @@ class LandPlan extends HTMLElement{
     if(this.controller)return;
     this.controller=new AbortController();
     this.parcel='garden';this.scenario=0;this.reserve=25;this.perCar=325;
-    this.innerHTML=`<div class="lp-header"><div><p class="lp-kicker">Land &amp; access</p><h3>Two parcels.<br><em>61 cents.</em></h3></div><p>The owner identifies a 40-cent compound and a separate 21-cent parcel for parking. Together they cover <strong>26,571.6 ft²</strong>. One cent equals 435.6 ft².</p></div>
-    <div class="lp-tabs" role="group" aria-label="Choose an area study"><button type="button" data-plan="garden" aria-pressed="true">The garden <span>17,424 ft²</span></button><button type="button" data-plan="parking" aria-pressed="false">Outside parking <span>9,147.6 ft²</span></button></div>
-    <div class="lp-panel" data-panel="garden">
-      <div class="lp-panel-heading"><h4>A working land budget</h4><p>These five proposed, non-overlapping allowances add to 40 cents. The survey will establish the actual boundaries and building footprints.</p></div>
-      <div class="lp-area-bar" role="img" aria-label="Proposed 40-cent allocation. Existing buildings and service 22.5%, daily terrace 10%, event lawn 17.5%, bamboo and root protection 30%, access and drainage 20%.">${zones.map(z=>`<span style="width:${z.cents/gardenCents*100}%;background:${z.color}"></span>`).join('')}</div>
-      <div class="lp-zone-list">${zones.map(z=>`<details><summary><span class="lp-zone" style="--zone:${z.color}">${z.title}</span><span class="lp-size">${z.cents} cents <small>${formatArea(z.cents*SQFT_PER_CENT)} ft²</small></span><span class="lp-toggle" aria-hidden="true">+</span></summary><div class="lp-zone-content"><b>${z.timing}</b><p>${z.note}</p></div></details>`).join('')}</div>
+    this.innerHTML=`<div class="lp-panel" data-panel="garden">
       <div class="lp-seating"><div><p class="lp-kicker">Service footprint</p><h4>From 24 to 40 guests</h4><div class="lp-toggles" role="group" aria-label="Seating and weather scenarios">${seating.map((s,i)=>`<button type="button" data-seat="${i}" aria-pressed="${i===0}">${s.short}</button>`).join('')}</div></div><div class="lp-seat-text" aria-live="polite"></div></div>
     </div>
     <div class="lp-panel" data-panel="parking" hidden>

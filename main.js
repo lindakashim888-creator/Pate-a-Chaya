@@ -70,10 +70,7 @@
   window.addEventListener("scroll", () => { if (!navFrame) { navFrame = true; requestAnimationFrame(markNav); } }, {passive:true});
   const dialog = select("#media-dialog");
   const dialogContent = select("#dialog-content");
-  const portraits = [
-    ["founder-guitar", "Dalvy Joseph with his bass guitar", "The musician and mentor"],
-    ["founder-profile", "Original Studio Illusions biographical poster showing Dalvy Joseph in profile", "The Studio Illusions biography"]
-  ];
+  const portraits = [["founder/dalvy", "Dalvy Joseph with his bass", "Dalvy Joseph with his bass"], ["founder/rehearsal", "Rehearsal at the cottage", "Rehearsal at the cottage"], ["founder/riders", "The riders arrive", "The riders arrive"], ["founder/studio", "Between takes in the tea room", "Between takes in the tea room"], ["founder/drummers", "Chaya after rehearsal", "Chaya after rehearsal"], ["founder/duet", "The courtyard duet", "The courtyard duet"], ["founder/setlist", "Choosing the next song", "Choosing the next song"], ["founder/bamboo", "Dancing under the bamboo", "Dancing under the bamboo"],["founder/boots","A guitarist wearing leather boots beside a pedal","Keeping time"]];
   let portraitIndex = 0;
   let opener;
   function openViewer(title, button) {
@@ -85,13 +82,13 @@
     const image = dialogContent.querySelector("img");
     image.src = "/assets/" + portraits[portraitIndex][0] + ".webp";
     image.alt = portraits[portraitIndex][1];
-    dialogContent.querySelector(".portrait-caption").textContent = (portraitIndex+1) + " / 2 · " + portraits[portraitIndex][2];
+    dialogContent.querySelector(".portrait-caption").textContent = (portraitIndex+1) + " / " + portraits.length + " · " + portraits[portraitIndex][2];
   }
-  select("[data-archive-founder]").addEventListener("click", (e) => {
-    portraitIndex = 0;
+  document.querySelectorAll("[data-archive-founder]").forEach(button => button.addEventListener("click", (e) => {
+    portraitIndex = Number(button.dataset.archiveFounder);
     dialogContent.innerHTML = '<div class="portrait-view"><img alt=""></div><div class="portrait-nav"><button type="button" aria-label="Previous portrait" data-portrait="-1">←</button><span class="portrait-caption" aria-live="polite"></span><button type="button" aria-label="Next portrait" data-portrait="1">→</button></div>';
-    renderPortrait(); openViewer("Dalvy Joseph · Founder portraits", e.currentTarget);
-  });
+    renderPortrait(); openViewer("Studio Illusions · The courtyard", e.currentTarget);
+  }));
   function nextPortrait(step) { portraitIndex = (portraitIndex + step + portraits.length) % portraits.length; renderPortrait(); }
   dialogContent.addEventListener("click", e => { const b = e.target.closest("[data-portrait]"); if (b) nextPortrait(Number(b.dataset.portrait)); });
   dialog.addEventListener("keydown", e => { if (dialogContent.querySelector(".portrait-nav") && ["ArrowLeft","ArrowRight"].includes(e.key)) { e.preventDefault(); nextPortrait(e.key === "ArrowLeft" ? -1 : 1); } });
